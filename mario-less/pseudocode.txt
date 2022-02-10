@@ -1,0 +1,4 @@
+- Make a variable called n, that is going to be the get_int value (put include cs50).
+- If n is less than 1 or greater than 8, don't show anything or display an error message.
+- Make a loop that uses this n variable as stop.
+- Have to use for loop inside others for loops.
