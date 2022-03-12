@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 14vh 3vw;
+  min-width: 90vw;
+  max-width: 94vw;
+  transition-duration: 1s;
+  color: #000000;
+}
+
+#title {
+  font-size: 7rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+#subtitle {
+  font-size: 2.5rem;
+  margin: 0;
+  padding-top: 3vh;
+}
+
+#presentation {
+  width: 100%;
+  height: 72vh;
+  padding: 0.5vh 2vw;
+  display: flex;
+  flex-flow: row;
+}
+
+#text {
+  width: 50%;
+}
+
+.p {
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  color: #222222;
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+#logoJ {
+  width: 50%;
+  height: 76vh;
+  position: absolute;
+  top: 10vh;
+  right: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0052af;
+}
+
+#box-logo h1 {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 35rem;
+  font-weight: bold;
+}
+
+.fake-title {
+  opacity: 0.5;
+  font-size: 15rem;
+  position: absolute;
+}
+
+.cards {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10rem 2vw;
+}
+
+.card {
+  width: 40rem;
+  height: 20rem;
+  font-size: "Open Sans", sans-serif;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: inset 21px 21px 43px #e8e8e8, inset -21px -21px 43px #ffffff;
+}
+
+.card-title {
+  color: #000000;
+}
+
+.card a {
+  color: #000000;
+}
+
+.menu-button {
+  position: fixed;
+  margin: 3vw;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+  color: #0052af;
+}
+
+.hidden {
+  display: none;
+}
+
+.cta-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #0052af;
+}
+
+.social-media {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.icons {
+  width: 30rem;
+  margin: 2rem 0;
+}
+
+.icons a {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+.icons a svg {
+  transition-duration: 200ms;
+  color: #0052af;
+}
+
+.icons a svg:hover {
+  color: #000000;
+  transform: scale(0.8);
+}
+
+.dots {
+  position: fixed;
+  bottom: 3.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition-duration: 100ms;
+}
+
+.dots__dot:hover {
+  transform: scale(0.8);
+  background-color: rgba(0, 81, 173, 0.5);
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: #0052af;
+  opacity: 1;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-weight: 300;
+  color: #222222;
+  transition: 500ms;
+}
+
+.navbar ul li a:hover {
+  color: #0052af;
+  letter-spacing: 1.5rem;
+}
+
+.navbar--active {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition-duration: 1s;
+}
+
+.navbar--active ul {
+  list-style: none;
+  font-size: 5rem;
+}
+
+.navbar--active ul li {
+  margin: 5rem;
+}
+
+.menu-close {
+  position: absolute;
+  right: 0;
+  margin: 6.5rem;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+
+.menu-close:hover {
+  color: #0052af;
+  transform: scale(1.5);
+  transform: translate(-1rem, 1rem);
+}
+
+@media (max-width: 1400px) {
+  #logoJ {
+    display: none;
+  }
+
+  #text {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  main {
+    padding: 10vh 3vw;
+  }
+  .cards {
+    gap: 2rem;
+  }
+
+  .card {
+    width: 100%;
+    height: 16rem;
+  }
+}
+
+@media (max-width: 670px) {
+  html {
+    font-size: 50%;
+  }
+
+  .cards {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 100%;
+    height: 16rem;
+  }
+}
+
+@media (max-width: 670px) {
+  html {
+    font-size: 35%;
+  }
+
+  .fake-title {
+    font-size: 12rem;
+  }
+
+  #presentation {
+    height: fit-content;
+    margin-bottom: 10rem;
+  }
+}

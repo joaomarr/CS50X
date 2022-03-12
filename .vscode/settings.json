@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.js": "javascript",
+        "*.html": "jinja-html",
+        "ctype.h": "c",
+        "string.h": "c"
+    }
+}
